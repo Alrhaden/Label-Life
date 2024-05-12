@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://8j788y3npai3"]
+
+[ext_resource type="Script" path="res://Scripts/loading_screen.gd" id="1_wy7q4"]
+[ext_resource type="Texture2D" uid="uid://bpkyuy6g26ba7" path="res://Assets/UI/LabelLife_Logo.png" id="2_rnagp"]
+[ext_resource type="Texture2D" uid="uid://ckx2ojejalt5n" path="res://Assets/UI/Blank_Page_Darkmode.png" id="2_s28gr"]
+[ext_resource type="FontFile" uid="uid://dt32q7pteq6dd" path="res://Assets/Fonts/RougeScript-Regular.ttf" id="4_ymd0y"]
+
+[node name="Loading_Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wy7q4")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s28gr")
+
+[node name="Logo" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rnagp")
+
+[node name="Text_Prompt" type="Label" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = -118.0
+offset_right = 124.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_ymd0y")
+theme_override_font_sizes/font_size = 175
+text = "Hello"

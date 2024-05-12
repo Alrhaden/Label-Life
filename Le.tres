@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UserData" load_steps=2 format=3 uid="uid://c87cf0dqphnk0"]
+
+[ext_resource type="Script" path="res://Scripts/UserData.gd" id="1_0xn6t"]
+
+[resource]
+script = ExtResource("1_0xn6t")
+_UserName = "Alrhaden"
+_Darkmode = false
+_isFirstTime = true
+_Subjects = {}

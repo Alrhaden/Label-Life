@@ -1,0 +1,208 @@
+[gd_scene load_steps=16 format=3 uid="uid://8j788y3npai3"]
+
+[ext_resource type="Script" path="res://Scripts/loading_screen.gd" id="1_wy7q4"]
+[ext_resource type="Texture2D" uid="uid://bpkyuy6g26ba7" path="res://Assets/UI/LabelLife_Logo.png" id="2_rnagp"]
+[ext_resource type="Texture2D" uid="uid://ckx2ojejalt5n" path="res://Assets/UI/Blank_Page_Darkmode.png" id="2_s28gr"]
+[ext_resource type="FontFile" uid="uid://dt32q7pteq6dd" path="res://Assets/Fonts/RougeScript-Regular.ttf" id="4_ymd0y"]
+[ext_resource type="FontFile" uid="uid://p5ky1dctfe4y" path="res://Assets/Fonts/SedanSC-Regular.ttf" id="5_sgstq"]
+[ext_resource type="Texture2D" uid="uid://c1heftnoobi88" path="res://Assets/UI/Label_nav.png" id="6_aogfe"]
+[ext_resource type="FontFile" uid="uid://bd045hwjmfeax" path="res://Assets/Fonts/Roboto-Regular.ttf" id="7_6sewa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vi4h6"]
+texture = ExtResource("6_aogfe")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w5jhn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ws1pj"]
+bg_color = Color(0.467681, 0.202131, 0.64029, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sl1br"]
+bg_color = Color(0.834992, 0.696624, 0.953051, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smosp"]
+bg_color = Color(0.35126, 0.140343, 0.488034, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjdeq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y3f0w"]
+bg_color = Color(0.466667, 0.203922, 0.639216, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r021v"]
+bg_color = Color(0.835294, 0.698039, 0.952941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[node name="Loading_Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wy7q4")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s28gr")
+
+[node name="Logo" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -416.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("2_rnagp")
+
+[node name="Text_Prompt" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.5
+offset_top = -103.0
+offset_right = 254.5
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_ymd0y")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="Text_Prompt"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -27.0
+offset_right = 300.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("5_sgstq")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_vi4h6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w5jhn")
+alignment = 1
+max_length = 15
+caret_blink = true
+
+[node name="Button" type="Button" parent="Text_Prompt"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -101.5
+offset_top = 94.0
+offset_right = 101.5
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("7_6sewa")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_ws1pj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sl1br")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_smosp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xjdeq")
+text = "CONTINUE"
+
+[node name="Yes" type="Button" parent="Text_Prompt"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -223.0
+offset_right = -20.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("7_6sewa")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_y3f0w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r021v")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xjdeq")
+text = "YEAH!"
+
+[node name="No" type="Button" parent="Text_Prompt"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_right = 216.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("7_6sewa")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_y3f0w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r021v")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xjdeq")
+text = "NO"
+
+[connection signal="text_changed" from="Text_Prompt/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="Text_Prompt/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Text_Prompt/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Text_Prompt/No" to="." method="_on_no_pressed"]

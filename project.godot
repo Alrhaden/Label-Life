@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Label Life"
+config/tags=PackedStringArray("android_app")
+run/main_scene="res://Pages/Pages/loading_screen.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/show_image=false
+config/icon="res://Assets/UI/LabelLife_Logo.png"
+
+[autoload]
+
+GsSpts="*res://Scripts/GSSpts.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/stretch/mode="canvas_items"
+window/handheld/orientation=1
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.180392, 0.0745098, 0.25098, 1)

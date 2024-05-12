@@ -1,0 +1,118 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpk0xnp0oxoff"]
+
+[ext_resource type="Script" path="res://Scripts/box_subs.gd" id="2_i31u8"]
+[ext_resource type="Texture2D" uid="uid://ddmw4f80ml8qb" path="res://Assets/UI/Nav_PP.png" id="2_vor70"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1ejk"]
+bg_color = Color(0.32549, 0.196078, 0.415686, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2njus"]
+texture = ExtResource("2_vor70")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iloh7"]
+bg_color = Color(0.2484, 0.2484, 0.2484, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m23h3"]
+
+[node name="Box_subs_GWA" type="Panel"]
+clip_contents = true
+custom_minimum_size = Vector2(570, 125)
+offset_left = 10.0
+offset_right = 580.0
+offset_bottom = 125.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a1ejk")
+script = ExtResource("2_i31u8")
+
+[node name="Unit" type="Label" parent="."]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 7.0
+offset_right = 366.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 20
+text = "UNITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Unit_Label" type="Label" parent="Unit"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 45.0
+offset_right = 84.0
+offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_2njus")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subject" type="Label" parent="."]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 7.0
+offset_right = 202.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 20
+text = "SUBJECT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subject_Label" type="Label" parent="Subject"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.5
+offset_top = 32.0
+offset_right = 99.5
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_iloh7")
+horizontal_alignment = 1
+
+[node name="Grade" type="Label" parent="."]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 7.0
+offset_right = 472.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 20
+text = "GRADE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Grade_Label" type="Label" parent="Grade"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 45.0
+offset_right = 89.0
+offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_2njus")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Edit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m23h3")
+text = "✎"
+
+[node name="Color_Sub" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 125.0
+
+[connection signal="pressed" from="Edit" to="." method="_on_edit_pressed"]

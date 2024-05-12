@@ -1,0 +1,379 @@
+[gd_scene load_steps=27 format=3 uid="uid://dqtpwsx758nx1"]
+
+[ext_resource type="Texture2D" uid="uid://ckx2ojejalt5n" path="res://Assets/UI/Blank_Page_Darkmode.png" id="1_o05wm"]
+[ext_resource type="Script" path="res://Scripts/main_page.gd" id="1_r8kmd"]
+[ext_resource type="FontFile" uid="uid://bd045hwjmfeax" path="res://Assets/Fonts/Roboto-Regular.ttf" id="1_vcxus"]
+[ext_resource type="Texture2D" uid="uid://c1heftnoobi88" path="res://Assets/UI/Label_nav.png" id="3_y3g37"]
+[ext_resource type="Texture2D" uid="uid://bjbwuylwgglb5" path="res://Assets/UI/Floating_Nav.png" id="4_0u1r0"]
+[ext_resource type="Texture2D" uid="uid://j88f3ss3hghi" path="res://Assets/UI/Side_vav_button.png" id="5_6wrpi"]
+[ext_resource type="Texture2D" uid="uid://c3hc8myqt8dqd" path="res://Assets/UI/SIde_Navigation.png" id="6_ap78m"]
+[ext_resource type="Texture2D" uid="uid://ygpetsa173in" path="res://Assets/UI/Side_Nav_Button.png" id="7_wplst"]
+[ext_resource type="Texture2D" uid="uid://2t4cpwyaje3o" path="res://Assets/UI/Add_button.png" id="7_y6kk2"]
+[ext_resource type="Texture2D" uid="uid://bpkyuy6g26ba7" path="res://Assets/UI/LabelLife_Logo.png" id="9_ci1mf"]
+[ext_resource type="FontFile" uid="uid://p5ky1dctfe4y" path="res://Assets/Fonts/SedanSC-Regular.ttf" id="10_fd4l8"]
+
+[sub_resource type="Theme" id="Theme_b2b4c"]
+default_font = ExtResource("1_vcxus")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjhms"]
+bg_color = Color(0, 0, 0, 0.898039)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q3rn6"]
+texture = ExtResource("4_0u1r0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ysah"]
+texture = ExtResource("7_y6kk2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_43euv"]
+texture = ExtResource("7_y6kk2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ykkh"]
+texture = ExtResource("7_y6kk2")
+modulate_color = Color(0.223103, 0.223103, 0.223103, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cg2dp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2pybv"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_usgyj"]
+bg_color = Color(0.12549, 0.0745098, 0.160784, 1)
+corner_radius_top_left = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u3bdm"]
+texture = ExtResource("3_y3g37")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hqu4h"]
+texture = ExtResource("6_ap78m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tfxe5"]
+texture = ExtResource("7_wplst")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8p3rd"]
+texture = ExtResource("7_wplst")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kgay1"]
+texture = ExtResource("7_wplst")
+modulate_color = Color(0, 0, 0, 0.752941)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1bxf4"]
+
+[node name="MainPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_b2b4c")
+script = ExtResource("1_r8kmd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_right = 724.0
+offset_bottom = 1288.0
+texture = ExtResource("1_o05wm")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 101.0
+offset_bottom = -169.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kjhms")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 75
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Floating_nav" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 1131.0
+offset_right = -381.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_q3rn6")
+
+[node name="Add_Button" type="Button" parent="Floating_nav"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 363.5
+offset_top = -47.0
+offset_right = 458.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_6ysah")
+theme_override_styles/hover = SubResource("StyleBoxTexture_43euv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7ykkh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cg2dp")
+
+[node name="Total_Subjects_L" type="Label" parent="Floating_nav"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 18.0
+offset_right = 252.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_2pybv")
+text = "10"
+
+[node name="Total_Subjects_L2" type="Label" parent="Floating_nav"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 52.0
+offset_right = 252.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_2pybv")
+text = "10"
+
+[node name="Total_Subjects_L3" type="Label" parent="Floating_nav"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 89.0
+offset_right = 252.0
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_2pybv")
+text = "10"
+
+[node name="Label_Titles" type="Panel" parent="Floating_nav"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 18.0
+offset_right = 221.0
+offset_bottom = 113.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_usgyj")
+
+[node name="Label" type="Label" parent="Floating_nav/Label_Titles"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 1.0
+offset_right = 174.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 20
+text = "TOTAL SUBJECTS:"
+
+[node name="Label2" type="Label" parent="Floating_nav/Label_Titles"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 71.0
+offset_right = 174.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 20
+text = "GPA:"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="Floating_nav/Label_Titles"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 34.0
+offset_right = 174.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 20
+text = "TOTAL UNITS:"
+horizontal_alignment = 2
+
+[node name="Page_Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 16.0
+offset_right = 688.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_u3bdm")
+text = "GPA CALCULATOR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cover" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.803922)
+
+[node name="Side_Nav" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -454.0
+offset_right = -721.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Nav_side" type="Panel" parent="Side_Nav"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hqu4h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Side_Nav/Nav_side"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = 308.0
+offset_right = -42.0
+offset_bottom = -149.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Home" type="Button" parent="Side_Nav/Nav_side/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_tfxe5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8p3rd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kgay1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1bxf4")
+text = "Home"
+
+[node name="GPA Calculator" type="Button" parent="Side_Nav/Nav_side/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_tfxe5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8p3rd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kgay1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1bxf4")
+text = "GPA Calculator"
+
+[node name="Settings" type="Button" parent="Side_Nav/Nav_side/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_tfxe5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8p3rd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kgay1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1bxf4")
+text = "Settings"
+
+[node name="About" type="Button" parent="Side_Nav/Nav_side/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_tfxe5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8p3rd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kgay1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1bxf4")
+text = "About"
+
+[node name="Donate" type="Button" parent="Side_Nav/Nav_side/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_tfxe5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8p3rd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kgay1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1bxf4")
+text = "Support"
+
+[node name="MarginContainer" type="MarginContainer" parent="Side_Nav/Nav_side"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -972.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Side_Nav/Nav_side/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Side_Nav/Nav_side/MarginContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(187, 178)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("9_ci1mf")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Side_Nav/Nav_side/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fd4l8")
+theme_override_font_sizes/font_size = 40
+text = "Alrhaden Javier"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Side_Nav/Nav_side"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Label Life Ver 1.0"
+
+[node name="Nav_Button" type="TextureButton" parent="Side_Nav"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -109.0
+offset_right = 55.0
+offset_bottom = 121.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("5_6wrpi")
+
+[connection signal="pressed" from="Floating_nav/Add_Button" to="." method="_on_add_button_pressed"]
+[connection signal="gui_input" from="Cover" to="." method="_on_cover_gui_input"]
+[connection signal="pressed" from="Side_Nav/Nav_Button" to="." method="_on_nav_button_pressed"]
